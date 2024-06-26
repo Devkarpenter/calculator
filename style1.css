@@ -35,7 +35,7 @@ body{
 }
 
 input{
-    width: 100%;
+    width:100%;
     border: none;
     padding: 24px;
     margin: 10px;
@@ -44,7 +44,7 @@ input{
     font-size: 20px;
     text-align: right;
     cursor: pointer;
-    color: #ffff;
+    color: #9b7f7f;
 }
 
 input::placeholder{
@@ -97,3 +97,39 @@ button:hover{
       transform: translateY(0px);
     }
   }
+
+.sky{
+    position: relative;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+}
+
+.star{
+    position:absolute ;
+    height:2px;
+    width:2px;
+    background-color: white;
+    border-radius:50%;
+    opacity:0;
+    animation: float 4s ease-in infinite, fade 4s ease-in infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(-100vh);
+    }
+}
+
+@keyframes fade{
+    0%,100%{ 
+         opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+}

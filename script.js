@@ -1,3 +1,23 @@
+
+function createStar() {
+  const sky = document.querySelector('.sky');
+  const star = document.createElement('div')
+
+  star.style.left = `${Math.random() * 100}vw`;
+  star.style.top = `${Math.random() * 100}vh`;
+  star.style.animationDelay = `${Math.random() * 4}s`
+
+  sky.appendChild(star);
+
+  setTimeout(() => {
+    star.remove();
+  },4000);
+}
+
+setInterval(createStar, 200);
+
+
+
 if (typeof document !== "undefined") {
 
   let input = document.getElementById('inputBox'); // Use correct ID selector
